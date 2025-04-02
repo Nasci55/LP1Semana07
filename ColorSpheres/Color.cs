@@ -13,7 +13,7 @@ namespace ColorSpheres
         private byte _alpha;
 
 
-        public Color(byte red; byte green; byte blue; byte alpha)
+        public Color(byte red, byte green, byte blue, byte alpha)
         {
             _red = red;
             _green = green;
@@ -21,7 +21,7 @@ namespace ColorSpheres
             _alpha = alpha;
         }
 
-        public Color(byte red; byte green; byte blue)
+        public Color(byte red, byte green, byte blue)
         {
             _red = red;
             _blue = blue;
@@ -29,28 +29,28 @@ namespace ColorSpheres
             _alpha = 255;
         }
 
-public byte GetRed()
-{
-    return _red;
-}
+        public byte GetRed()
+        {
+            return _red;
+        }
 
-public byte GetBlue()
-{
-    return _blue;
-}
+        public byte GetBlue()
+        {
+            return _blue;
+        }
 
-public byte GetGreen()
-{
-    return _green;
-}
+        public byte GetGreen()
+        {
+            return _green;
+        }
 
-public byte GetAlpha()
-{
-    return _alpha;
-}
+        public byte GetAlpha()
+        {
+            return _alpha;
+        }
 
 
-public byte GetGrey() => (byte)((_red + _blue + _green) / 3);
+        public byte GetGrey() => (byte)((_red + _blue + _green) / 3);
 
 
 
