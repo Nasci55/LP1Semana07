@@ -19,12 +19,12 @@ namespace ColorSpheres
             _timesThrown = 0;
         }
 
-        private void Pop()
+        public void Pop()
         {
             _radius = 0;
         }
 
-        private void Throw()
+        public void Throw()
         {
             if (_radius > 0)
             {
