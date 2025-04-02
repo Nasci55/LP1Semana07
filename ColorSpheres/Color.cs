@@ -50,9 +50,11 @@ public byte GetAlpha()
 }
 
 
+public byte GetGrey() => (byte)((_red + _blue + _green) / 3);
 
-                    
-    
-    
+
+
+
+
     }
 }
