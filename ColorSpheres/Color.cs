@@ -29,6 +29,30 @@ namespace ColorSpheres
             _alpha = 255;
         }
 
-        
+public byte GetRed()
+{
+    return _red;
 }
+
+public byte GetBlue()
+{
+    return _blue;
+}
+
+public byte GetGreen()
+{
+    return _green;
+}
+
+public byte GetAlpha()
+{
+    return _alpha;
+}
+
+
+
+                    
+    
+    
+    }
 }
