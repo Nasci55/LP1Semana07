@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ColorSpheres
+namespace BetterColorSpheres
 {
     public class Sphere
     {
@@ -32,6 +32,6 @@ namespace ColorSpheres
             }
         }
 
-        public int GetTimesThrown() => _timesThrown;
+        public int GetTimesThrown => _timesThrown;
     }
 }
