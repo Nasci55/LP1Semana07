@@ -7,6 +7,22 @@ namespace PlayerStats
 {
     public class Player
     {
-        
+        private float highScore;
+        private int playedGames, wonGames;
+
+
+        public float HighScore
+        {
+            get => highScore;
+            set
+            {
+                if (value < highScore)
+                {
+                    highScore = value;
+                }
+            }
+        }
+
+        public float Name { get; }
     }
 }
