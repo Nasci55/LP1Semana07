@@ -54,7 +54,10 @@ namespace PlayerStats
 
         public Player(string name)
         {
-
+            Name = name;
+            playedGames = 0;
+            wonGames = 0;
+            highScore = 0;
         }
 
 
