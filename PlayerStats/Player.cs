@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace PlayerStats
             get => highScore;
             set
             {
-                if (value < highScore)
+                if (value > highScore)
                 {
                     highScore = value;
                 }
@@ -28,17 +29,16 @@ namespace PlayerStats
         {
             get
             {
-                float winRate;
+
                 if (playedGames > 0)
                 {
-                    winRate = (float)wonGames / playedGames;
+                    return (float)wonGames / playedGames;
                 }
                 else
                 {
-                    winRate = 0;
+                    return 0;
                 }
 
-                return winRate;
             }
 
         }
