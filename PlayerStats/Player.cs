@@ -9,6 +9,7 @@ namespace PlayerStats
     {
         private float highScore;
         private int playedGames, wonGames;
+        public string Name { get; }
 
 
         public float HighScore
@@ -23,6 +24,17 @@ namespace PlayerStats
             }
         }
 
-        public float Name { get; }
+        public float WinRate
+        {
+            get => WinRate;
+
+            set
+            {
+                value = wonGames/playedGames;
+
+            }
+
+        }
+
     }
 }
