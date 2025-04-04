@@ -60,5 +60,18 @@ namespace MyRoguelike
                 return 100 + (Level - 1) * 20;
             }
         }
+
+        public void TakeDamage(float damage)
+        {
+            _health = Health - damage;
+
+            XP = (int)damage / 20;
+
+        }
+
+        public Hero()
+        {
+
+        }
     }
 }
