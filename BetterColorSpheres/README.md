@@ -1,5 +1,4 @@
 ```mermaid
-
 classDiagram
     class Sphere {
     -_color: Color
@@ -10,7 +9,6 @@ classDiagram
     +Sphere(Color color, float radius)
     +Pop() void
     +Throw() void
-    +GetTimesThrown() int
     
     }
 
@@ -28,8 +26,4 @@ classDiagram
     }
 
     Sphere --> Color
-
-
-
-
 ```
