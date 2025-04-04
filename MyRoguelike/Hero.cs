@@ -21,10 +21,7 @@ namespace MyRoguelike
 
             set
             {
-                if (value > _xp)
-                {
-                    _xp = value;
-                }
+                _xp += value;
             }
         }
 
@@ -44,16 +41,19 @@ namespace MyRoguelike
             }
             set
             {
-                if (_health > MaxHealth)
+                if (value > 0 && value < MaxHealth)
                 {
-                    _health = MaxHealth;
+                    _health = value;
                 }
-                if (_health < 0)
+                else if (value <= 0)
                 {
                     _health = 0;
                 }
-                _health = value;
+                else if (value >= MaxHealth)
+                {
+                    _health = MaxHealth;
 
+                }
             }
         }
 
@@ -67,7 +67,7 @@ namespace MyRoguelike
 
         public void TakeDamage(float damage)
         {
-            _health = Health - damage;
+            Health -= damage;
 
             XP = (int)damage / 20;
 
