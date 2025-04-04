@@ -40,7 +40,24 @@ namespace MyRoguelike
         {
             get
             {
+                if (_health > MaxHealth)
+                {
+                    return MaxHealth;
+                }
+                if (_health < 0)
+                {
+                    return 0;
+                }
 
+                return _health;
+            }
+        }
+
+        public float MaxHealth
+        {
+            get
+            {
+                return 100 + (Level - 1) * 20;
             }
         }
     }
