@@ -40,16 +40,20 @@ namespace MyRoguelike
         {
             get
             {
+                return _health;
+            }
+            set
+            {
                 if (_health > MaxHealth)
                 {
-                    return MaxHealth;
+                    _health = MaxHealth;
                 }
                 if (_health < 0)
                 {
-                    return 0;
+                    _health = 0;
                 }
+                _health = value;
 
-                return _health;
             }
         }
 
@@ -69,9 +73,11 @@ namespace MyRoguelike
 
         }
 
-        public Hero()
+        public Hero(string name)
         {
-
+            Name = name;
+            _xp = 0;
+            Health = MaxHealth;
         }
     }
 }
