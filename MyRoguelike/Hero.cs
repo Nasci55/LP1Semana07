@@ -8,18 +8,39 @@ namespace MyRoguelike
 {
     public class Hero
     {
-        private int xp;
-        private float health;
+        private int _xp;
+        private float _health;
         public string Name { get; }
 
         public int XP
         {
+            get
+            {
+                return _xp;
+            }
+
             set
             {
-                if (value > xp)
+                if (value > _xp)
                 {
-                    xp = value;
+                    _xp = value;
                 }
+            }
+        }
+
+        public int Level
+        {
+            get
+            {
+                return 1 + XP / 1000;
+            }
+        }
+
+        public float Health
+        {
+            get
+            {
+
             }
         }
     }
